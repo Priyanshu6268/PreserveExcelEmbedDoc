@@ -336,8 +336,8 @@ def get_user_inputs():
     # if destination_folder.startswith('"') and destination_folder.endswith('"'):
     #     destination_folder = destination_folder[1:-1]
 
-    source_excel = r"C:\Users\kumarsaw\Downloads\RJIL 5G Cluster Acceptance Report_KA-HBDD-0002_7_3500 - Copy.xlsx"
-    destination_folder = r"C:\Users\kumarsaw\Documents"
+    source_excel = r""
+    destination_folder = r""
 
     
     start_cell = input("Enter starting cell (e.g., AG11): ").strip().upper()
@@ -393,4 +393,5 @@ if __name__ == "__main__":
         exit(0)
     except Exception as e:
         print(f"\n❌ ERROR: {str(e)}")
+
         exit(1)
