@@ -1,3 +1,7 @@
+"""
+This script performs dictionary-based data insertion into an existing Excel file using openpyxl, ensuring that embedded objects (charts, images, etc.) remain intact. 
+It dynamically appends data to the next available row, making it ideal for structured logging or incremental updates without disrupting the file’s original layout or embedded content.
+"""
 import os
 import shutil
 import zipfile
@@ -472,8 +476,8 @@ def validate_excel_file(file_path):
 
 def get_user_inputs():
     print("\n=== Excel Analysis Column Updater ===")
-    source_excel=r"C:\Users\kumarsaw\Downloads\RJIL 5G Cluster Acceptance Report_KA-HBDD-0002_7_3500.xlsx"
-    # source_excel = input("Enter source Excel file path: ").strip()
+    
+    source_excel = input("Enter source Excel file path: ").strip()
     if source_excel.startswith('"') and source_excel.endswith('"'):
         source_excel = source_excel[1:-1]
     
@@ -526,4 +530,5 @@ if __name__ == "__main__":
         exit(0)
     except Exception as e:
         print(f"\n❌ ERROR: {str(e)}")
+
         exit(1)
